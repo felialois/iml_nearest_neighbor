@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 
 
 def normalize_columns(data):
+    """
+
+    :param data:
+    :return: data with all the columns normalized
+    """
     norm_data = []
     for col in data:
         min_v = min(col)

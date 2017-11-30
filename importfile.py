@@ -4,6 +4,12 @@ import math
 
 
 def read_file(fl, class_name):
+    """
+
+    :param fl: name of the file
+    :param class_name: name of the column class
+    :return: (data, data_classes) the data with the nominal values transformed and an array containing the class column
+    """
     data, meta = arff.loadarff(fl)
 
     columns = len(data[0])
