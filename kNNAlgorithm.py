@@ -54,10 +54,10 @@ def apply_weights(label, class_labels, weights):
     return result
 
 
-train = [((2, 3, 'A'), (2, 4, 'B'), (6, 1, 'A'), (7, 2, 'C'), (4, 3, 'D'), (5, 1, 'E')), (1, 2, 1, 2, 2, 4)]
-test = [(2, 1, 'A')]
-print 'weighted'
-print nearest_neighbor(train, test, 3, 'Euclidean', True)
-print 'non weighted'
-print nearest_neighbor(train, test, 3, 'Euclidean', False)
+# train = [((2, 3, 'A'), (2, 4, 'B'), (6, 1, 'A'), (7, 2, 'C'), (4, 3, 'D'), (5, 1, 'E')), (1, 2, 1, 2, 2, 4)]
+# test = [(2, 1, 'A')]
+# print 'weighted'
+# print nearest_neighbor(train, test, 3, 'Euclidean', True)
+# print 'non weighted'
+# print nearest_neighbor(train, test, 3, 'Euclidean', False)
 

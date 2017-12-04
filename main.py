@@ -17,9 +17,30 @@ train_str = 'train'
 training, training_class, testing, testing_class = importfile.get_datasets(dir_name, class_name, test_fl, test_str,
                                                                            train_str)
 
-kNNAlgorithm.nearest_neighbor((training, training_class), testing, 5, 'Euclidean', False)
+cls = kNNAlgorithm.nearest_neighbor((training, training_class), testing, 5, 'Euclidean', False)
+cls2 = kNNAlgorithm.nearest_neighbor((training, training_class), testing, 5, 'Euclidean', True)
 
-print 'done'
+print ' Euclidean without weights'
+corrects = 0.0
+incorrects = 0.0
+for res in zip(cls, testing_class):
+    if res[0] == res[1]:
+        corrects += 1.0
+    else:
+        incorrects += 1.0
+print 'Correct : ' + str(corrects) + '  ' + str(corrects / len(cls)) + '%'
+print 'Incorrect : ' + str(incorrects) + '  ' + str(incorrects / len(cls)) + '%'
+
+print ' Euclidean with weights'
+corrects = 0.0
+incorrects = 0.0
+for res in zip(cls2, testing_class):
+    if res[0] == res[1]:
+        corrects += 1.0
+    else:
+        incorrects += 1.0
+print 'Correct : ' + str(corrects) + '  ' + str(corrects / len(cls2)) + '%'
+print 'Incorrect : ' + str(incorrects) + '  ' + str(incorrects / len(cls2)) + '%'
 
 
 
