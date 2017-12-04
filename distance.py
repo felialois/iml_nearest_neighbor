@@ -17,7 +17,7 @@ def distance(tp, x, y):
         return hamming
     elif tp == 'Euclidean':
         a = zip(x, y)
-        return np.sqrt(np.sum((x[i]- y[i])**2 for i in range(len(x))))
+        return np.sqrt(np.sum((x[i] - y[i])**2 for i in range(len(x))))
     elif tp == 'Cosine':
         numerator = np.sum([x[i]*y[i] for i in range(len(x))])
         denominator = np.sqrt(np.sum([j**2 for j in x])) * np.sqrt(np.sum([j**2 for j in y]))

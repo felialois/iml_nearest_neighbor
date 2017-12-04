@@ -1,6 +1,8 @@
 from scipy.io import arff
 import numpy as np
 import math
+from os import listdir
+from os.path import isfile, join
 
 
 def read_file(fl, class_name):
@@ -11,33 +13,51 @@ def read_file(fl, class_name):
     :return: (data, data_classes) the data with the nominal values transformed and an array containing the class column
     """
     data, meta = arff.loadarff(fl)
+    data = np.array(data.tolist())
 
     columns = len(data[0])
 
     if meta[class_name]:
         columns = columns - 1
 
-    data2 = np.zeros(shape=(len(data), columns))
     data_classes = []
 
-    for i in range(len(meta.names())):
-        if meta.names()[i] == class_name:
-            for j in range(len(data)):
-                data_classes.append(data[j][i])
-        else:
-            if meta.types()[i] == 'numeric':
-                for j in range(len(data)):
-                    if math.isnan(data[j][i]):
-                        data2[j][i] = -1
-                    else:
-                        data2[j][i] = data[j][i]
-            else:
-                values = meta[meta.names()[i]][1]
-                for j in range(len(data)):
-                    if data[j][i] == '?':
-                        data2[j][i] = -1
-                    else:
-                        data2[j][i] = values.index(data[j][i])
+    class_col = meta.names().index(class_name)
 
+    data_classes = zip(*data[:, [class_col]])[0]
+    data2 = np.delete(data, class_col, 1)
     return data2, data_classes
-    # print data2
+
+
+def get_datasets(directory_name, class_name, test_fl, test_str, train_str):
+    """
+    Read from the directory, extract all the training files and the test files
+
+    :param directory_name: name of the directory with all the files
+    :param class_name: Name of the column with the class attribute
+    :param test_fl: number of file to be used for testing
+    :param test_str: unique identifier for the testing files
+    :param train_str: unique identifier for the training files
+    :return: (training, training_class, testing, testing_class) both datasets with their respective classes
+    """
+    train_files = []
+    test_file = ""
+    files = [f for f in listdir(directory_name) if isfile(join(directory_name, f))]
+    for fl in files:
+        if test_fl in fl.lower() and test_str in fl.lower():
+            test_file = fl.lower()
+        elif train_str in fl.lower():
+            train_files.append(fl.lower())
+
+    training_dts = []
+    training_class = []
+    for train_file in train_files:
+        tr, cl = read_file(directory_name + '/' + train_file, class_name)
+        training_dts.append(tr)
+        training_class += cl
+
+    testing, testing_class = read_file(directory_name + '/' + test_file, class_name)
+    training = training_dts[0]
+    for i in range(1, len(training_dts)):
+        training = np.concatenate((training, training_dts[i]), axis=0)
+    return training, training_class, testing, testing_class

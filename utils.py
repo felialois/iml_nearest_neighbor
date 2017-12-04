@@ -3,6 +3,7 @@ from random import sample
 import matplotlib.pyplot as plt
 
 
+
 def normalize_columns(data):
     """
 
@@ -18,7 +19,3 @@ def normalize_columns(data):
             norm_col.append((element - min_v) / (max_v - min_v))
         norm_data.append(norm_col)
     return norm_data
-
-
-x = [sample(range(1000), 50)]
-norm = normalize_columns(x)

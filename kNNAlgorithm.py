@@ -10,6 +10,8 @@ def nearest_neighbor(data_train, data_test, k, distance_measure, weighted):
     :param data_train: (data, class)
     :param data_test:  (data)
     :param k:
+    :param weighted:
+
     :return:
     """
     cls = []
@@ -52,8 +54,8 @@ def apply_weights(label, class_labels, weights):
     return result
 
 
-train = [((2, 3), (2, 4), (6, 1), (7, 2), (4, 3), (5, 1)), (1, 2, 1, 2, 2, 4)]
-test = [(2, 1)]
+train = [((2, 3, 'A'), (2, 4, 'B'), (6, 1, 'A'), (7, 2, 'C'), (4, 3, 'D'), (5, 1, 'E')), (1, 2, 1, 2, 2, 4)]
+test = [(2, 1, 'A')]
 print 'weighted'
 print nearest_neighbor(train, test, 3, 'Euclidean', True)
 print 'non weighted'
