@@ -27,7 +27,10 @@ def nearest_neighbor(data_train, data_test, k, distance_measure, weighted):
         # If weights are turned on, calculate the weight of every point
         if weighted:
             for d in range(len(dists)):
-                weights[d] = 1 / (dists[d] ** 2)
+                if dists[d] == 0:
+                    weights[d] = 1
+                else:
+                    weights[d] = 1 / (dists[d] ** 2)
             # Use all the training data for the weighted KNN
             k = len(dists)
 
@@ -53,11 +56,9 @@ def apply_weights(label, class_labels, weights):
             result += weights[cl_lb]
     return result
 
-
 # train = [((2, 3, 'A'), (2, 4, 'B'), (6, 1, 'A'), (7, 2, 'C'), (4, 3, 'D'), (5, 1, 'E')), (1, 2, 1, 2, 2, 4)]
 # test = [(2, 1, 'A')]
 # print 'weighted'
 # print nearest_neighbor(train, test, 3, 'Euclidean', True)
 # print 'non weighted'
 # print nearest_neighbor(train, test, 3, 'Euclidean', False)
-

@@ -5,8 +5,8 @@ import kNNAlgorithm
 arguments = sys.argv
 dir_name = arguments[1]
 class_name = arguments[2]
-# k = int(arguments[3])
-# distance_metric = arguments[4]
+k = int(arguments[3])
+distance_metric = arguments[4]
 # weighted = arguments[5]
 
 # Constants
@@ -17,10 +17,10 @@ train_str = 'train'
 training, training_class, testing, testing_class = importfile.get_datasets(dir_name, class_name, test_fl, test_str,
                                                                            train_str)
 
-cls = kNNAlgorithm.nearest_neighbor((training, training_class), testing, 5, 'Euclidean', False)
-cls2 = kNNAlgorithm.nearest_neighbor((training, training_class), testing, 5, 'Euclidean', True)
+cls = kNNAlgorithm.nearest_neighbor((training, training_class), testing, k, distance_metric, False)
+cls2 = kNNAlgorithm.nearest_neighbor((training, training_class), testing, k, distance_metric, True)
 
-print ' Euclidean without weights'
+print distance_metric+' without weights'
 corrects = 0.0
 incorrects = 0.0
 for res in zip(cls, testing_class):
@@ -31,7 +31,7 @@ for res in zip(cls, testing_class):
 print 'Correct : ' + str(corrects) + '  ' + str((corrects / len(cls))*100) + '%'
 print 'Incorrect : ' + str(incorrects) + '  ' + str((incorrects / len(cls))*100) + '%'
 
-print ' Euclidean with weights'
+print distance_metric+' with weights'
 corrects = 0.0
 incorrects = 0.0
 for res in zip(cls2, testing_class):
