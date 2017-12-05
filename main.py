@@ -28,8 +28,8 @@ for res in zip(cls, testing_class):
         corrects += 1.0
     else:
         incorrects += 1.0
-print 'Correct : ' + str(corrects) + '  ' + str(corrects / len(cls)) + '%'
-print 'Incorrect : ' + str(incorrects) + '  ' + str(incorrects / len(cls)) + '%'
+print 'Correct : ' + str(corrects) + '  ' + str((corrects / len(cls))*100) + '%'
+print 'Incorrect : ' + str(incorrects) + '  ' + str((incorrects / len(cls))*100) + '%'
 
 print ' Euclidean with weights'
 corrects = 0.0
@@ -39,8 +39,8 @@ for res in zip(cls2, testing_class):
         corrects += 1.0
     else:
         incorrects += 1.0
-print 'Correct : ' + str(corrects) + '  ' + str(corrects / len(cls2)) + '%'
-print 'Incorrect : ' + str(incorrects) + '  ' + str(incorrects / len(cls2)) + '%'
+print 'Correct : ' + str(corrects) + '  ' + str((corrects / len(cls2))*100) + '%'
+print 'Incorrect : ' + str(incorrects) + '  ' + str((incorrects / len(cls2))*100) + '%'
 
 
 
