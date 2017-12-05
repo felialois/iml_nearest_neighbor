@@ -1,4 +1,5 @@
 from scipy.io import arff
+import pandas as pd
 import numpy as np
 import math
 from os import listdir
@@ -14,20 +15,14 @@ def read_file(fl, class_name):
     """
     data, meta = arff.loadarff(fl)
     # data = np.asarray(data).tolist()
-
-    columns = len(data[0])
-
-    if meta[class_name]:
-        columns = columns - 1
+    data = pd.DataFrame(data).as_matrix()
 
     data_classes = []
 
     class_col = meta.names().index(class_name)
 
     data_classes = [data[i][class_col] for i in range(len(data))]
-    cols = meta.names()
-    cols.remove(class_name)
-    data2 = data[cols]
+    data2 = np.delete(data, class_col, 1)
     return data2, data_classes
 
 

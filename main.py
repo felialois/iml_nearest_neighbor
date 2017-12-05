@@ -20,8 +20,8 @@ training, training_class, testing, testing_class = importfile.get_datasets(dir_n
                                                                            train_str)
 
 tr = np.transpose(training)
-training = zip(*utils.normalize_columns(zip(*training)))
-testing = zip(*utils.normalize_columns(zip(*testing)))
+training = np.transpose(utils.normalize_columns(np.transpose(training)))
+testing = np.transpose(utils.normalize_columns(np.transpose(testing)))
 
 cls = kNNAlgorithm.nearest_neighbor((training, training_class), testing, k, distance_metric, False)
 cls2 = kNNAlgorithm.nearest_neighbor((training, training_class), testing, k, distance_metric, True)
