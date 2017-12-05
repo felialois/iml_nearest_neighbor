@@ -13,7 +13,7 @@ def read_file(fl, class_name):
     :return: (data, data_classes) the data with the nominal values transformed and an array containing the class column
     """
     data, meta = arff.loadarff(fl)
-    data = np.asarray(data).tolist()
+    # data = np.asarray(data).tolist()
 
     columns = len(data[0])
 
@@ -25,9 +25,9 @@ def read_file(fl, class_name):
     class_col = meta.names().index(class_name)
 
     data_classes = [data[i][class_col] for i in range(len(data))]
-    cols = range(len(data[0]))
-    cols.remove(class_col)
-    data2 = [data[i][0:class_col] + data[i][class_col + 1:] for i in range(len(data))]
+    cols = meta.names()
+    cols.remove(class_name)
+    data2 = data[cols]
     return data2, data_classes
 
 

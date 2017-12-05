@@ -1,6 +1,8 @@
 import sys
 import importfile
+import utils
 import kNNAlgorithm
+import numpy as np
 
 arguments = sys.argv
 dir_name = arguments[1]
@@ -16,6 +18,10 @@ train_str = 'train'
 
 training, training_class, testing, testing_class = importfile.get_datasets(dir_name, class_name, test_fl, test_str,
                                                                            train_str)
+
+tr = np.transpose(training)
+training = zip(*utils.normalize_columns(zip(*training)))
+testing = zip(*utils.normalize_columns(zip(*testing)))
 
 cls = kNNAlgorithm.nearest_neighbor((training, training_class), testing, k, distance_metric, False)
 cls2 = kNNAlgorithm.nearest_neighbor((training, training_class), testing, k, distance_metric, True)
