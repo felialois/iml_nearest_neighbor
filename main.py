@@ -24,7 +24,6 @@ training = np.transpose(utils.normalize_columns(np.transpose(training)))
 testing = np.transpose(utils.normalize_columns(np.transpose(testing)))
 
 cls = kNNAlgorithm.nearest_neighbor((training, training_class), testing, k, distance_metric, False)
-cls2 = kNNAlgorithm.nearest_neighbor((training, training_class), testing, k, distance_metric, True)
 
 print distance_metric+' without weights'
 corrects = 0.0

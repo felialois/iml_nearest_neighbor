@@ -14,7 +14,6 @@ def read_file(fl, class_name):
     :return: (data, data_classes) the data with the nominal values transformed and an array containing the class column
     """
     data, meta = arff.loadarff(fl)
-    # data = np.asarray(data).tolist()
     data = pd.DataFrame(data).as_matrix()
 
     data_classes = []
