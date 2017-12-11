@@ -3,17 +3,19 @@ import numpy as np
 import distance
 
 
-def nearest_neighbor(data_train, data_test, k, distance_measure, weighted):
+def nearest_neighbor(data_train, data_test, k, distance_measure, weights=[]):
     """
 
     :param distance_measure:
     :param data_train: (data, class)
     :param data_test:  (data)
     :param k:
-    :param weighted:
+    :param weights:
 
     :return:
     """
+    if len(weights) == 0:
+        weights = [1.0 for i in range(len(data_train[0]))]
     cls = []
     for y in data_test:
         # We alculate all the distances between the training data and the test object
@@ -21,19 +23,8 @@ def nearest_neighbor(data_train, data_test, k, distance_measure, weighted):
         for i, x in enumerate(data_train[0]):
             dists[i] = distance.distance(distance_measure, x, y)
 
-        # Instantiate all the weights as one
-        weights = [1.0 for i in range(len(dists))]
-
-        # If weights are turned on, calculate the weight of every point
-        if weighted:
-            for d in range(len(dists)):
-                if dists[d] == 0:
-                    weights[d] = 1
-                else:
-                    weights[d] = 1 / (dists[d] ** 2)
-            # Use all the training data for the weighted KNN
-            k = len(dists)
-
+        # Apply the weights to the distances
+        dists = [dists[y] for y in range(len(dists))]
         # Then we sort the distances
         dists = enumerate(dists)
         ord_dists = sorted(dists, key=lambda distrs: distrs[1])
