@@ -36,24 +36,16 @@ def get_datasets(directory_name, class_name, test_fl, test_str, train_str):
     :param train_str: unique identifier for the training files
     :return: (training, training_class, testing, testing_class) both datasets with their respective classes
     """
-    train_files = []
+    train_file = ""
     test_file = ""
     files = [f for f in listdir(directory_name) if isfile(join(directory_name, f))]
     for fl in files:
         if test_fl in fl.lower() and test_str in fl.lower():
             test_file = fl.lower()
         elif train_str in fl.lower():
-            train_files.append(fl.lower())
+            train_file = fl.lower()
 
-    training_dts = []
-    training_class = []
-    for train_file in train_files:
-        tr, cl = read_file(directory_name + '/' + train_file, class_name)
-        training_dts.append(tr)
-        training_class += cl
-
+    training, training_class = read_file(directory_name + '/' + train_file, class_name)
     testing, testing_class = read_file(directory_name + '/' + test_file, class_name)
-    training = training_dts[0]
-    for i in range(1, len(training_dts)):
-        training = np.concatenate((training, training_dts[i]), axis=0)
+
     return training, training_class, testing, testing_class
