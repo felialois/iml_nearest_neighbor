@@ -5,6 +5,7 @@ from sklearn import metrics
 from sklearn.ensemble import ExtraTreesClassifier
 import numpy as np
 from scipy.stats.stats import pearsonr
+from skrebate import ReliefF
 
 
 def calculate_weights(data, target, algorithm):
@@ -20,6 +21,10 @@ def calculate_weights(data, target, algorithm):
         model.fit(data, target)
         # display the relative importance of each attribute
         return model.feature_importances_
+    if algorithm == 'Relieff':
+        fs = ReliefF()
+        fs.fit(data, target)
+        return fs.feature_importances_
     # elif algorithm=='Correlation':
     #     corr =
     #     for i in range(len(data)):
