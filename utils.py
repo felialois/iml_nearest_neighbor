@@ -42,4 +42,3 @@ def encode_data(data):
         else:
             res.append([-1 if math.isnan(x) else x for x in col])
     return np.transpose(res)
-
