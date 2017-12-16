@@ -27,7 +27,7 @@ def nearest_neighbor(data_train, data_test, k, distance_measure, policy, weights
         dists = [dists[y] for y in range(len(dists))]
         # Then we sort the distances
         dists = enumerate(dists)
-        ord_dists = sorted(dists, key=lambda distrs: distrs[1])
+        ord_dists = sorted(dists, key=lambda dists: dists[1])
 
         # Finally we get the k-nearest neighbors and select the predicted class
         knn = ord_dists[:k]

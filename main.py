@@ -49,8 +49,8 @@ for k in k_neighbors:                           # Different k neighbors
                     start = time.time()
                     predicted = kNNAlgorithm.nearest_neighbor((training, training_class), testing, k, dist, policy)
                     efficiency_folds[0, test_fl] = time.time() - start
-                    accuracy_folds[0, test_fl] = metrics.accuracy(training_class, predicted)
-                    recall_folds[0, test_fl] = metrics.recall(training_class, predicted)
+                    accuracy_folds[0, test_fl] = metrics.accuracy(testing_class, predicted)
+                    recall_folds[0, test_fl] = metrics.recall(testing_class, predicted)
 
 
                     # Weighted KNN
@@ -58,35 +58,35 @@ for k in k_neighbors:                           # Different k neighbors
                     weights_tree = kNNWeightedAlgorithm.calculate_weights(utils.encode_data(training), training_class, 'TreeClassifier')
                     res = kNNAlgorithm.nearest_neighbor((training, training_class), testing, k, dist, policy, weights_tree)
                     efficiency_folds[1, test_fl] = time.time() - start
-                    accuracy_folds[1, test_fl] = metrics.accuracy(training_class, predicted)
-                    recall_folds[1, test_fl] = metrics.recall(training_class, predicted)
+                    accuracy_folds[1, test_fl] = metrics.accuracy(testing_class, predicted)
+                    recall_folds[1, test_fl] = metrics.recall(testing_class, predicted)
 
 
                     start = time.time()
                     weights_relieff = kNNWeightedAlgorithm.calculate_weights(utils.encode_data(training), training_class, 'Relieff')
                     predicted = kNNAlgorithm.nearest_neighbor((training, training_class), testing, k, dist, policy, weights_relieff)
                     efficiency_folds[2, test_fl] = time.time() - start
-                    accuracy_folds[2, test_fl] = metrics.accuracy(training_class, predicted)
-                    recall_folds[2, test_fl] = metrics.recall(training_class, predicted)
+                    accuracy_folds[2, test_fl] = metrics.accuracy(testing_class, predicted)
+                    recall_folds[2, test_fl] = metrics.recall(testing_class, predicted)
 
 
                     # Selected KNN
                     start = time.time()
                     new_train = kNNSelectedAlgorithm.remove_features(training, training_class, 'variance')
-                    new_test =
+                    new_test = []
                     predicted = kNNAlgorithm.nearest_neighbor((new_train, training_class), new_test, k, dist, policy)
                     efficiency_folds[3, test_fl] = time.time() - start
-                    accuracy_folds[3, test_fl] = metrics.accuracy(training_class, predicted)
-                    recall_folds[3, test_fl] = metrics.recall(training_class, predicted)
+                    accuracy_folds[3, test_fl] = metrics.accuracy(testing_class, predicted)
+                    recall_folds[3, test_fl] = metrics.recall(testing_class, predicted)
 
 
                     start = time.time()
                     new_train = kNNSelectedAlgorithm.remove_features(training, training_class, 'L1')
-                    new_test =
+                    new_test = []
                     predicted = kNNAlgorithm.nearest_neighbor((new_train, training_class), new_test, k, dist, policy)
                     efficiency_folds[4, test_fl] = time.time() - start
-                    accuracy_folds[4, test_fl] = metrics.accuracy(training_class, predicted)
-                    recall_folds[4, test_fl] = metrics.recall(training_class, predicted)
+                    accuracy_folds[4, test_fl] = metrics.accuracy(testing_class, predicted)
+                    recall_folds[4, test_fl] = metrics.recall(testing_class, predicted)
 
                 # Basic KNN
                 f.write(dir_name[dataset] + ',Basic KNN,' + str(k) + ',' + dist + ',' + policy + ',')
