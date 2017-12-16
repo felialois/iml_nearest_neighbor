@@ -25,7 +25,7 @@ dist_metrics = ['Hamming', 'Euclidean', 'Cosine', 'Canberra']
 policies = ['voting', 'similar']
 
 f = open('results.txt', 'w')
-f.write('dataset,k,distance metric,policy,efficiency,accuracy,recall')
+f.write('dataset,algorithm,k,distance metric,policy,efficiency,accuracy,recall')
 
 for k in k_neighbors:                           # Different k neighbors
     for dist in dist_metrics:                   # Metrics for the distances
@@ -87,3 +87,39 @@ for k in k_neighbors:                           # Different k neighbors
                     efficiency_folds[4, test_fl] = time.time() - start
                     accuracy_folds[4, test_fl] = metrics.accuracy(training_class, predicted)
                     recall_folds[4, test_fl] = metrics.recall(training_class, predicted)
+
+                # Basic KNN
+                f.write(dir_name[dataset] + ',Basic KNN,' + str(k) + ',' + dist + ',' + policy + ',')
+                efficiency = np.mean(efficiency_folds[0])
+                accuracy = np.mean(accuracy_folds[0])
+                recall = np.mean(recall_folds[0])
+                f.write(str(efficiency + ',' + str(accuracy) + ',' + str(recall) + '\n'))
+
+                # Weighted KNN
+                f.write(dir_name[dataset] + ',Weighted KNN TreeClassifier,' + str(k) + ',' + dist + ',' + policy + ',')
+                efficiency = np.mean(efficiency_folds[1])
+                accuracy = np.mean(accuracy_folds[1])
+                recall = np.mean(recall_folds[1])
+                f.write(str(efficiency + ',' + str(accuracy) + ',' + str(recall) + '\n'))
+
+                f.write(dir_name[dataset] + ',Weighted KNN Relieff,' + str(k) + ',' + dist + ',' + policy + ',')
+                efficiency = np.mean(efficiency_folds[2])
+                accuracy = np.mean(accuracy_folds[2])
+                recall = np.mean(recall_folds[2])
+                f.write(str(efficiency + ',' + str(accuracy) + ',' + str(recall) + '\n'))
+
+                # Selected KNN
+                f.write(dir_name[dataset] + ',Selected KNN variance,' + str(k) + ',' + dist + ',' + policy + ',')
+                efficiency = np.mean(efficiency_folds[3])
+                accuracy = np.mean(accuracy_folds[03])
+                recall = np.mean(recall_folds[3])
+                f.write(str(efficiency + ',' + str(accuracy) + ',' + str(recall) + '\n'))
+
+                f.write(dir_name[dataset] + ',Selected KNN L1,' + str(k) + ',' + dist + ',' + policy + ',')
+                efficiency = np.mean(efficiency_folds[4])
+                accuracy = np.mean(accuracy_folds[4])
+                recall = np.mean(recall_folds[4])
+                f.write(str(efficiency + ',' + str(accuracy) + ',' + str(recall) + '\n'))
+
+
+
