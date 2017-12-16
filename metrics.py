@@ -3,7 +3,7 @@ from sklearn.metrics import precision_score, recall_score
 from scipy.stats import wilcoxon
 
 
-def accuracy(x_true, x_predicted, average):
+def accuracy(x_true, x_predicted):
     """
 
     :param x_true:
@@ -11,7 +11,7 @@ def accuracy(x_true, x_predicted, average):
     :param average:
     :return:
     """
-    return precision_score(x_true, x_predicted, average=average)
+    return precision_score(x_true, x_predicted, average='micro')
 
 
 def recall(x_true, x_predicted):

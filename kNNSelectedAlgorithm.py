@@ -3,7 +3,7 @@ from sklearn.svm import LinearSVC
 from sklearn.datasets import load_iris
 
 
-def remove_features(data, target, function, k=0):
+def remove_features(data, target, function):
     """
 
     :param target:
