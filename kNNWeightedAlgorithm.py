@@ -24,7 +24,8 @@ def calculate_weights(data, target, algorithm):
     if algorithm == 'Relieff':
         fs = ReliefF()
         fs.fit(data, target)
-        return fs.feature_importances_
+        feature_sum = np.sum(fs.feature_importances_)
+        return [fs.feature_importances_[f] / feature_sum for f in range(len(fs.feature_importances_))]
     # elif algorithm=='Correlation':
     #     corr =
     #     for i in range(len(data)):
