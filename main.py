@@ -72,8 +72,10 @@ for k in k_neighbors:                           # Different k neighbors
 
                     # Selected KNN
                     start = time.time()
-                    new_train = kNNSelectedAlgorithm.remove_features(training, training_class, 'variance')
-                    new_test = []
+                    new_train, removed_cols = kNNSelectedAlgorithm.remove_features(training, training_class, 'variance')
+                    new_test = testing
+                    for col in reversed(removed_cols):
+                        new_test = np.delete(new_test, col, 1)
                     predicted = kNNAlgorithm.nearest_neighbor((new_train, training_class), new_test, k, dist, policy)
                     efficiency_folds[3, test_fl] = time.time() - start
                     accuracy_folds[3, test_fl] = metrics.accuracy(testing_class, predicted)
@@ -81,8 +83,10 @@ for k in k_neighbors:                           # Different k neighbors
 
 
                     start = time.time()
-                    new_train = kNNSelectedAlgorithm.remove_features(training, training_class, 'L1')
-                    new_test = []
+                    new_train, removed_cols = kNNSelectedAlgorithm.remove_features(training, training_class, 'L1')
+                    new_test = testing
+                    for col in reversed(removed_cols):
+                        new_test = np.delete(new_test, col, 1)
                     predicted = kNNAlgorithm.nearest_neighbor((new_train, training_class), new_test, k, dist, policy)
                     efficiency_folds[4, test_fl] = time.time() - start
                     accuracy_folds[4, test_fl] = metrics.accuracy(testing_class, predicted)
