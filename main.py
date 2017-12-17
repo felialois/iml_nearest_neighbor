@@ -58,7 +58,7 @@ for k in k_neighbors:  # Different k neighbors
                     start = time.time()
                     weights_tree = kNNWeightedAlgorithm.calculate_weights(utils.encode_data(training), training_class,
                                                                           'TreeClassifier')
-                    res = kNNAlgorithm.nearest_neighbor((training, training_class), testing, k, dist, policy,
+                    predicted = kNNAlgorithm.nearest_neighbor((training, training_class), testing, k, dist, policy,
                                                         weights_tree)
                     efficiency_folds[1, test_fl] = time.time() - start
                     accuracy_folds[1, test_fl] = metrics.accuracy(testing_class, predicted)
