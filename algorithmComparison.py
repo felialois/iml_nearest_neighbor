@@ -12,6 +12,7 @@ dir_name = ["datasetsCBR/credit-a", "datasetsCBR/grid", "datasetsCBR/vowel"]
 class_name = ["class", "class", "Class"]
 test_str = 'test'
 train_str = 'train'
+number_of_folds = 10
 # Best parameters found
 k = 1
 dist = 'Euclidean'
@@ -32,7 +33,7 @@ f_rank.write('dataset,fold,basic knn,weighted knn treeCl,weighted knn relieff,se
 
 for dataset in range(len(dir_name)):  # Datasets
     print('Dataset ' + dir_name[dataset])
-    for test_fl in range(0, 10):  # Different folds
+    for test_fl in range(number_of_folds):  # Different folds
         efficiencies = np.zeros(5)
         accuracies = np.zeros(5)
         recalls = np.zeros(5)

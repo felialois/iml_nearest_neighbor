@@ -1,12 +1,11 @@
 from sklearn.feature_selection import VarianceThreshold, SelectFromModel
 from sklearn.svm import LinearSVC
-from sklearn.datasets import load_iris
 import numpy as np
 
 
 def remove_features(data, target, fn):
     """
-
+    Function that transforms the data for the selected knn algorithm
     :param target:
     :param fn:
     :param k:

@@ -1,4 +1,3 @@
-import sys
 import importfile
 import utils
 import kNNAlgorithm
@@ -8,16 +7,9 @@ import kNNSelectedAlgorithm
 import metrics
 import time
 
-# arguments = sys.argv
-# dir_name = arguments[1]
-# class_name = arguments[2]
-# k = int(arguments[3])
-# distance_metric = arguments[4]
-# weighted = arguments[5]
-
 # Constants
-dir_name = ["datasetsCBR/vowel"]
-class_name = ["Class"]
+dir_name = ["datasetsCBR/credit-a", "datasetsCBR/grid", "datasetsCBR/vowel"]
+class_name = ["class", "class", "Class"]
 test_str = 'test'
 train_str = 'train'
 k_neighbors = [1, 3, 5, 7]
@@ -75,7 +67,7 @@ for k in k_neighbors:  # Different k neighbors
 
                     # Selected KNN
                     start = time.time()
-                    kept_cols, removed_cols = kNNSelectedAlgorithm.remove_features(utils.encode_data(training),
+                    _, removed_cols = kNNSelectedAlgorithm.remove_features(utils.encode_data(training),
                                                                                    training_class, 'variance')
                     new_test = testing
                     new_train = training
@@ -88,7 +80,7 @@ for k in k_neighbors:  # Different k neighbors
                     recall_folds[3, test_fl] = metrics.recall(testing_class, predicted)
 
                     start = time.time()
-                    kept_cols, removed_cols = kNNSelectedAlgorithm.remove_features(utils.encode_data(training),
+                    _, removed_cols = kNNSelectedAlgorithm.remove_features(utils.encode_data(training),
                                                                                    training_class, 'L1')
                     new_test = testing
                     new_train = training

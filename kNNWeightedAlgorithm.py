@@ -28,7 +28,3 @@ def calculate_weights(data, target, algorithm):
         fs.fit(data, target)
         feature_sum = np.sum(fs.feature_importances_)
         return [fs.feature_importances_[f] / feature_sum for f in range(len(fs.feature_importances_))]
-    # elif algorithm=='Correlation':
-    #     corr =
-    #     for i in range(len(data)):
-    #         for j in range(len(data)):
