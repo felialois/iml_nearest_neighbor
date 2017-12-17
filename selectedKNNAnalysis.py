@@ -1,11 +1,7 @@
 import importfile
 import utils
-import kNNAlgorithm
 import numpy as np
-import kNNWeightedAlgorithm
 import kNNSelectedAlgorithm
-import metrics
-import time
 
 # Parameters
 dir_name = ["datasetsCBR/credit-a", "datasetsCBR/grid", "datasetsCBR/vowel"]
