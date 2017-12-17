@@ -6,6 +6,7 @@ from sklearn.ensemble import ExtraTreesClassifier
 import numpy as np
 from scipy.stats.stats import pearsonr
 from skrebate import ReliefF
+import utils
 
 
 def calculate_weights(data, target, algorithm):
@@ -15,6 +16,7 @@ def calculate_weights(data, target, algorithm):
     :param target:
     :return:
     """
+    target = utils.encode_target(target)
     if algorithm == 'TreeClassifier':
         # fit an Extra Trees model to the data
         model = ExtraTreesClassifier()

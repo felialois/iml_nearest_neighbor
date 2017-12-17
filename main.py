@@ -16,8 +16,8 @@ import time
 # weighted = arguments[5]
 
 # Constants
-dir_name = ["datasetsCBR/bal"]
-class_name = ["class"]
+dir_name = ["datasetsCBR/vowel"]
+class_name = ["Class"]
 test_str = 'test'
 train_str = 'train'
 k_neighbors = [1, 3, 5, 7]
@@ -26,16 +26,17 @@ policies = ['voting', 'similar']
 
 f = open('results.txt', 'w')
 f.write('dataset,algorithm,k,distance metric,policy,efficiency,accuracy,recall')
+number_of_folds = 10
 
 for k in k_neighbors:  # Different k neighbors
     print('K :', str(k))
     for dist in dist_metrics:  # Metrics for the distances
         for policy in policies:  # Policies
             for dataset in range(len(dir_name)):  # Datasets
-                efficiency_folds = np.zeros((5, 10))
-                accuracy_folds = np.zeros((5, 10))
-                recall_folds = np.zeros((5, 10))
-                for test_fl in range(0, 10):  # Different folds
+                efficiency_folds = np.zeros((5, number_of_folds))
+                accuracy_folds = np.zeros((5, number_of_folds))
+                recall_folds = np.zeros((5, number_of_folds))
+                for test_fl in range(0, number_of_folds):  # Different folds
                     print("Fold number " + str(test_fl))
 
                     training, training_class, testing, testing_class = importfile.get_datasets(dir_name[dataset],

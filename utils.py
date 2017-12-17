@@ -42,3 +42,17 @@ def encode_data(data):
         else:
             res.append([-1 if math.isnan(x) else x for x in col])
     return np.transpose(res)
+
+
+def encode_target(data):
+    """
+    Transform all the categorical columns into encoded numeric columns
+    :param data: dataset
+    :return: dataset with all the categorical columns replaces
+    """
+
+    unique_values = np.unique(data)
+    new_d = []
+    for i in range(len(data)):
+        new_d.append(np.where(unique_values == data[i])[0][0])
+    return new_d
