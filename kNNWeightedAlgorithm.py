@@ -1,10 +1,5 @@
-import kNNAlgorithm
-import sklearn.feature_selection as sk
-from sklearn import datasets
-from sklearn import metrics
 from sklearn.ensemble import ExtraTreesClassifier
 import numpy as np
-from scipy.stats.stats import pearsonr
 from skrebate import ReliefF
 import utils
 
