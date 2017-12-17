@@ -26,8 +26,11 @@ def remove_features(data, target, fn):
     data_t = np.transpose(data)
 
     i = 0
+    kept_cols = []
     removed_cols = []
     for i, col in enumerate(data_t):
         if col not in selected_t:
             removed_cols.append(i)
-    return selected_data, removed_cols
+        else:
+            kept_cols.append(i)
+    return kept_cols, removed_cols
