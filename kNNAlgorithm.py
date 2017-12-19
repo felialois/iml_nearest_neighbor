@@ -1,18 +1,17 @@
-import utils
 import numpy as np
 import distance
 
 
 def nearest_neighbor(data_train, data_test, k, distance_measure, policy, weights=[]):
     """
-
+    Function of the k nearest neighbor classification
     :param distance_measure:
     :param data_train: (data, class)
     :param data_test:  (data)
     :param k:
     :param weights:
 
-    :return:
+    :return: prediction given for the test data
     """
     if len(weights) == 0:
         weights = [1.0 for i in range(len(data_train[0]))]
@@ -51,10 +50,3 @@ def nearest_neighbor(data_train, data_test, k, distance_measure, policy, weights
             raise ValueError
 
     return cls
-
-# train = [((2, 3, 'A'), (2, 4, 'B'), (6, 1, 'A'), (7, 2, 'C'), (4, 3, 'D'), (5, 1, 'E')), (1, 2, 1, 2, 2, 4)]
-# test = [(2, 1, 'A')]
-# print 'weighted'
-# print nearest_neighbor(train, test, 3, 'Euclidean', True)
-# print 'non weighted'
-# print nearest_neighbor(train, test, 3, 'Euclidean', False)

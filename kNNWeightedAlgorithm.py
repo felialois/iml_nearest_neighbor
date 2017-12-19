@@ -1,10 +1,5 @@
-import kNNAlgorithm
-import sklearn.feature_selection as sk
-from sklearn import datasets
-from sklearn import metrics
 from sklearn.ensemble import ExtraTreesClassifier
 import numpy as np
-from scipy.stats.stats import pearsonr
 from skrebate import ReliefF
 import utils
 
@@ -28,7 +23,3 @@ def calculate_weights(data, target, algorithm):
         fs.fit(data, target)
         feature_sum = np.sum(fs.feature_importances_)
         return [fs.feature_importances_[f] / feature_sum for f in range(len(fs.feature_importances_))]
-    # elif algorithm=='Correlation':
-    #     corr =
-    #     for i in range(len(data)):
-    #         for j in range(len(data)):
