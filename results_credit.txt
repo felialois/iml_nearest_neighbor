@@ -1,0 +1,161 @@
+dataset,algorithm,k,distance metric,policy,efficiency,accuracy,recall
+datasetsCBR/credit-a,Basic KNN,1,Hamming,voting,0.726001119614,0.567715260017,0.530329328283
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,1,Hamming,voting,0.774503707886,0.567715260017,0.530329328283
+datasetsCBR/credit-a,Weighted KNN Relieff,1,Hamming,voting,5.33293917179,0.572127024723,0.533594967568
+datasetsCBR/credit-a,Selected KNN variance,1,Hamming,voting,0.727831816673,0.572127024723,0.533594967568
+datasetsCBR/credit-a,Selected KNN L1,1,Hamming,voting,0.718476939201,0.572127024723,0.533594967568
+datasetsCBR/credit-a,Basic KNN,1,Hamming,similar,0.675939798355,0.567715260017,0.530329328283
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,1,Hamming,similar,0.709095668793,0.567715260017,0.530329328283
+datasetsCBR/credit-a,Weighted KNN Relieff,1,Hamming,similar,4.9712944746,0.572127024723,0.533594967568
+datasetsCBR/credit-a,Selected KNN variance,1,Hamming,similar,0.679160952568,0.572127024723,0.533594967568
+datasetsCBR/credit-a,Selected KNN L1,1,Hamming,similar,0.620117020607,0.566244671782,0.525875669322
+datasetsCBR/credit-a,Basic KNN,1,Euclidean,voting,1.02066793442,0.683738886859,0.689163510513
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,1,Euclidean,voting,1.22697491646,0.683738886859,0.689163510513
+datasetsCBR/credit-a,Weighted KNN Relieff,1,Euclidean,voting,5.44971759319,0.698402752405,0.707403247573
+datasetsCBR/credit-a,Selected KNN variance,1,Euclidean,voting,1.02892124653,0.685167458288,0.691478168125
+datasetsCBR/credit-a,Selected KNN L1,1,Euclidean,voting,0.956629252434,0.689579222994,0.689109747072
+datasetsCBR/credit-a,Basic KNN,1,Euclidean,similar,1.01431384087,0.683738886859,0.689163510513
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,1,Euclidean,similar,1.21280851364,0.683738886859,0.689163510513
+datasetsCBR/credit-a,Weighted KNN Relieff,1,Euclidean,similar,5.41823961735,0.698402752405,0.707403247573
+datasetsCBR/credit-a,Selected KNN variance,1,Euclidean,similar,1.0152490139,0.685167458288,0.691478168125
+datasetsCBR/credit-a,Selected KNN L1,1,Euclidean,similar,0.863580083847,0.679434295457,0.673659831962
+datasetsCBR/credit-a,Basic KNN,1,Cosine,voting,2.51066308022,0.543222506394,0.58235884376
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,1,Cosine,voting,2.69020085335,0.543222506394,0.58235884376
+datasetsCBR/credit-a,Weighted KNN Relieff,1,Cosine,voting,6.90830478668,0.541606381683,0.582386269644
+datasetsCBR/credit-a,Selected KNN variance,1,Cosine,voting,2.55679740906,0.537361466326,0.578128292195
+datasetsCBR/credit-a,Selected KNN L1,1,Cosine,voting,2.54318008423,0.537361466326,0.578128292195
+datasetsCBR/credit-a,Basic KNN,1,Cosine,similar,2.67124772072,0.543222506394,0.58235884376
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,1,Cosine,similar,2.85011355877,0.543222506394,0.58235884376
+datasetsCBR/credit-a,Weighted KNN Relieff,1,Cosine,similar,7.29892420769,0.541606381683,0.582386269644
+datasetsCBR/credit-a,Selected KNN variance,1,Cosine,similar,2.67077941895,0.537361466326,0.578128292195
+datasetsCBR/credit-a,Selected KNN L1,1,Cosine,similar,2.42940740585,0.535806844477,0.556644029428
+datasetsCBR/credit-a,Basic KNN,1,Canberra,voting,5.5981869936,0.591011448057,0.564145879587
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,1,Canberra,voting,6.88868443966,0.591011448057,0.564145879587
+datasetsCBR/credit-a,Weighted KNN Relieff,1,Canberra,voting,11.4342557669,0.557507002801,0.5
+datasetsCBR/credit-a,Selected KNN variance,1,Canberra,voting,5.62538230419,0.591011448057,0.564827608724
+datasetsCBR/credit-a,Selected KNN L1,1,Canberra,voting,5.62023909092,0.591011448057,0.564827608724
+datasetsCBR/credit-a,Basic KNN,1,Canberra,similar,5.59155106544,0.591011448057,0.564145879587
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,1,Canberra,similar,6.85794744492,0.591011448057,0.564145879587
+datasetsCBR/credit-a,Weighted KNN Relieff,1,Canberra,similar,11.4178429365,0.557507002801,0.5
+datasetsCBR/credit-a,Selected KNN variance,1,Canberra,similar,5.60628204346,0.591011448057,0.564827608724
+datasetsCBR/credit-a,Selected KNN L1,1,Canberra,similar,5.08984928131,0.580866520521,0.55085324975
+datasetsCBR/credit-a,Basic KNN,3,Hamming,voting,0.74587225914,0.636093045914,0.628868355753
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,3,Hamming,voting,0.795538806915,0.636093045914,0.628868355753
+datasetsCBR/credit-a,Weighted KNN Relieff,3,Hamming,voting,5.44209806919,0.641954085982,0.634131513648
+datasetsCBR/credit-a,Selected KNN variance,3,Hamming,voting,0.744583964348,0.641954085982,0.634131513648
+datasetsCBR/credit-a,Selected KNN L1,3,Hamming,voting,0.692976117134,0.627668371697,0.627266335815
+datasetsCBR/credit-a,Basic KNN,3,Hamming,similar,0.748480057716,0.442492997199,0.5
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,3,Hamming,similar,0.797270798683,0.442492997199,0.5
+datasetsCBR/credit-a,Weighted KNN Relieff,3,Hamming,similar,5.46787407398,0.442492997199,0.5
+datasetsCBR/credit-a,Selected KNN variance,3,Hamming,similar,0.742367839813,0.442492997199,0.5
+datasetsCBR/credit-a,Selected KNN L1,3,Hamming,similar,0.680569911003,0.442492997199,0.5
+datasetsCBR/credit-a,Basic KNN,3,Euclidean,voting,1.1360465765,0.666555839727,0.676869313482
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,3,Euclidean,voting,1.36177270412,0.666555839727,0.676869313482
+datasetsCBR/credit-a,Weighted KNN Relieff,3,Euclidean,voting,5.98293819427,0.692857751796,0.708066039789
+datasetsCBR/credit-a,Selected KNN variance,3,Euclidean,voting,1.13644058704,0.662186700767,0.672921945061
+datasetsCBR/credit-a,Selected KNN L1,3,Euclidean,voting,1.04477798939,0.642186700767,0.65828174655
+datasetsCBR/credit-a,Basic KNN,3,Euclidean,similar,1.13405938148,0.592779198636,0.604856558269
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,3,Euclidean,similar,1.37255403996,0.592779198636,0.604856558269
+datasetsCBR/credit-a,Weighted KNN Relieff,3,Euclidean,similar,6.00485270023,0.662837047863,0.673846371512
+datasetsCBR/credit-a,Selected KNN variance,3,Euclidean,similar,1.1352339983,0.591350627207,0.603223629794
+datasetsCBR/credit-a,Selected KNN L1,3,Euclidean,similar,1.05160706043,0.582654975033,0.599762091333
+datasetsCBR/credit-a,Basic KNN,3,Cosine,voting,2.82010114193,0.532781634393,0.577394540943
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,3,Cosine,voting,2.99753911495,0.532781634393,0.577394540943
+datasetsCBR/credit-a,Weighted KNN Relieff,3,Cosine,voting,7.6000939846,0.524064669346,0.568581907623
+datasetsCBR/credit-a,Selected KNN variance,3,Cosine,voting,2.79502103329,0.532781634393,0.577394540943
+datasetsCBR/credit-a,Selected KNN L1,3,Cosine,voting,2.80553145409,0.532781634393,0.577394540943
+datasetsCBR/credit-a,Basic KNN,3,Cosine,similar,2.81517620087,0.579292412617,0.609672848374
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,3,Cosine,similar,3.00185952187,0.579292412617,0.609672848374
+datasetsCBR/credit-a,Weighted KNN Relieff,3,Cosine,similar,7.65021467209,0.575006698332,0.604530712638
+datasetsCBR/credit-a,Selected KNN variance,3,Cosine,similar,2.81494688988,0.585153452685,0.614936006269
+datasetsCBR/credit-a,Selected KNN L1,3,Cosine,similar,2.81323158741,0.585153452685,0.614936006269
+datasetsCBR/credit-a,Basic KNN,3,Canberra,voting,5.63209848404,0.493330897576,0.541449871577
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,3,Canberra,voting,6.86674349308,0.493330897576,0.541449871577
+datasetsCBR/credit-a,Weighted KNN Relieff,3,Canberra,voting,11.4451811075,0.442492997199,0.5
+datasetsCBR/credit-a,Selected KNN variance,3,Canberra,voting,5.60384697914,0.493330897576,0.541449871577
+datasetsCBR/credit-a,Selected KNN L1,3,Canberra,voting,4.59888436794,0.484635245403,0.534607766314
+datasetsCBR/credit-a,Basic KNN,3,Canberra,similar,5.64711010456,0.471798806479,0.518188803274
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,3,Canberra,similar,6.83915839195,0.471798806479,0.518188803274
+datasetsCBR/credit-a,Weighted KNN Relieff,3,Canberra,similar,11.4357738256,0.442492997199,0.5
+datasetsCBR/credit-a,Selected KNN variance,3,Canberra,similar,5.62898581028,0.473248081841,0.519173740804
+datasetsCBR/credit-a,Selected KNN L1,3,Canberra,similar,5.08769834042,0.470390938984,0.517271342127
+datasetsCBR/credit-a,Basic KNN,5,Hamming,voting,0.740946936607,0.499212032639,0.497550824953
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,5,Hamming,voting,0.7894957304,0.499212032639,0.497550824953
+datasetsCBR/credit-a,Weighted KNN Relieff,5,Hamming,voting,5.42336752415,0.499212032639,0.497550824953
+datasetsCBR/credit-a,Selected KNN variance,5,Hamming,voting,0.748178863525,0.499212032639,0.497550824953
+datasetsCBR/credit-a,Selected KNN L1,5,Hamming,voting,0.552851915359,0.470116916332,0.484649122807
+datasetsCBR/credit-a,Basic KNN,5,Hamming,similar,0.732938694954,0.442492997199,0.5
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,5,Hamming,similar,0.780110526085,0.442492997199,0.5
+datasetsCBR/credit-a,Weighted KNN Relieff,5,Hamming,similar,5.38922846317,0.442492997199,0.5
+datasetsCBR/credit-a,Selected KNN variance,5,Hamming,similar,0.739038729668,0.442492997199,0.5
+datasetsCBR/credit-a,Selected KNN L1,5,Hamming,similar,0.621990847588,0.442492997199,0.5
+datasetsCBR/credit-a,Basic KNN,5,Euclidean,voting,1.1442407608,0.658005724029,0.671302294197
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,5,Euclidean,voting,1.36052544117,0.658005724029,0.671302294197
+datasetsCBR/credit-a,Weighted KNN Relieff,5,Euclidean,voting,5.99831757545,0.684096334186,0.697585651474
+datasetsCBR/credit-a,Selected KNN variance,5,Euclidean,voting,1.14385149479,0.658005724029,0.671302294197
+datasetsCBR/credit-a,Selected KNN L1,5,Euclidean,voting,1.13886301517,0.658005724029,0.671302294197
+datasetsCBR/credit-a,Basic KNN,5,Euclidean,similar,1.14685184956,0.538537327975,0.548303513125
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,5,Euclidean,similar,1.37206318378,0.538537327975,0.548303513125
+datasetsCBR/credit-a,Weighted KNN Relieff,5,Euclidean,similar,6.02736990452,0.563410668615,0.572716033259
+datasetsCBR/credit-a,Selected KNN variance,5,Euclidean,similar,1.14079315662,0.537108756546,0.546339732706
+datasetsCBR/credit-a,Selected KNN L1,5,Euclidean,similar,1.05689105988,0.524251613689,0.538771494493
+datasetsCBR/credit-a,Basic KNN,5,Cosine,voting,2.81932959557,0.509610887833,0.555194593183
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,5,Cosine,voting,3.01388251781,0.509610887833,0.555194593183
+datasetsCBR/credit-a,Weighted KNN Relieff,5,Cosine,voting,7.63130323887,0.475999269273,0.527961777894
+datasetsCBR/credit-a,Selected KNN variance,5,Cosine,voting,2.81331007481,0.506669711363,0.552563014235
+datasetsCBR/credit-a,Selected KNN L1,5,Cosine,voting,2.68869729042,0.505241139934,0.551942666841
+datasetsCBR/credit-a,Basic KNN,5,Cosine,similar,2.80313909054,0.579585921325,0.60108027513
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,5,Cosine,similar,3.00234692097,0.579585921325,0.60108027513
+datasetsCBR/credit-a,Weighted KNN Relieff,5,Cosine,similar,7.63026309013,0.592503958105,0.616169735754
+datasetsCBR/credit-a,Selected KNN variance,5,Cosine,similar,2.81183419228,0.585446961393,0.606343433024
+datasetsCBR/credit-a,Selected KNN L1,5,Cosine,similar,2.81230478287,0.585446961393,0.606343433024
+datasetsCBR/credit-a,Basic KNN,5,Canberra,voting,5.58736088276,0.459802094751,0.511125767272
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,5,Canberra,voting,6.86190314293,0.459802094751,0.511125767272
+datasetsCBR/credit-a,Weighted KNN Relieff,5,Canberra,voting,11.3916522026,0.442492997199,0.5
+datasetsCBR/credit-a,Selected KNN variance,5,Canberra,voting,5.5875442028,0.459802094751,0.511125767272
+datasetsCBR/credit-a,Selected KNN L1,5,Canberra,voting,5.60370819569,0.459802094751,0.511125767272
+datasetsCBR/credit-a,Basic KNN,5,Canberra,similar,5.62951922417,0.440937766411,0.487871446607
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,5,Canberra,similar,6.87155616283,0.440937766411,0.487871446607
+datasetsCBR/credit-a,Weighted KNN Relieff,5,Canberra,similar,11.4067770958,0.442492997199,0.5
+datasetsCBR/credit-a,Selected KNN variance,5,Canberra,similar,5.59558589458,0.440937766411,0.487540594663
+datasetsCBR/credit-a,Selected KNN L1,5,Canberra,similar,5.62962367535,0.440937766411,0.487540594663
+datasetsCBR/credit-a,Basic KNN,7,Hamming,voting,0.739600777626,0.615653391791,0.594094292804
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,7,Hamming,voting,0.76390144825,0.615653391791,0.594094292804
+datasetsCBR/credit-a,Weighted KNN Relieff,7,Hamming,voting,5.30878908634,0.617102667154,0.595410082278
+datasetsCBR/credit-a,Selected KNN variance,7,Hamming,voting,0.722829651833,0.617102667154,0.595410082278
+datasetsCBR/credit-a,Selected KNN L1,7,Hamming,voting,0.665143704414,0.597985020095,0.583918854207
+datasetsCBR/credit-a,Basic KNN,7,Hamming,similar,0.681895685196,0.442492997199,0.5
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,7,Hamming,similar,0.727934193611,0.442492997199,0.5
+datasetsCBR/credit-a,Weighted KNN Relieff,7,Hamming,similar,5.126313591,0.442492997199,0.5
+datasetsCBR/credit-a,Selected KNN variance,7,Hamming,similar,0.697114610672,0.442492997199,0.5
+datasetsCBR/credit-a,Selected KNN L1,7,Hamming,similar,0.632273054123,0.442492997199,0.5
+datasetsCBR/credit-a,Basic KNN,7,Euclidean,voting,1.05131385326,0.687163561077,0.697659004832
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,7,Euclidean,voting,1.24903359413,0.687163561077,0.697659004832
+datasetsCBR/credit-a,Weighted KNN Relieff,7,Euclidean,voting,5.56553959846,0.698549506759,0.712201689086
+datasetsCBR/credit-a,Selected KNN variance,7,Euclidean,voting,1.06123719215,0.685692972841,0.696343215358
+datasetsCBR/credit-a,Selected KNN L1,7,Euclidean,voting,0.992837452888,0.657751796371,0.67274672413
+datasetsCBR/credit-a,Basic KNN,7,Euclidean,similar,1.13387072086,0.520931677019,0.527910626442
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,7,Euclidean,similar,1.37306900024,0.520931677019,0.527910626442
+datasetsCBR/credit-a,Weighted KNN Relieff,7,Euclidean,similar,5.96331226826,0.521288515406,0.530305820382
+datasetsCBR/credit-a,Selected KNN variance,7,Euclidean,similar,1.13166098595,0.520973693825,0.527262635497
+datasetsCBR/credit-a,Selected KNN L1,7,Euclidean,similar,1.1275660038,0.520973693825,0.527262635497
+datasetsCBR/credit-a,Basic KNN,7,Cosine,voting,2.81833894253,0.49072524662,0.539236863872
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,7,Cosine,voting,2.96105716228,0.49072524662,0.539236863872
+datasetsCBR/credit-a,Weighted KNN Relieff,7,Cosine,voting,7.57325730324,0.451189867251,0.50574202255
+datasetsCBR/credit-a,Selected KNN variance,7,Cosine,voting,2.76657726765,0.48778407015,0.536605284924
+datasetsCBR/credit-a,Selected KNN L1,7,Cosine,voting,2.67360029221,0.480431128973,0.530728091942
+datasetsCBR/credit-a,Basic KNN,7,Cosine,similar,2.80784480572,0.594059188893,0.602237821601
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,7,Cosine,similar,2.99579205513,0.594059188893,0.602237821601
+datasetsCBR/credit-a,Weighted KNN Relieff,7,Cosine,similar,7.58136820793,0.586496772622,0.603393844413
+datasetsCBR/credit-a,Selected KNN variance,7,Cosine,similar,2.77264847755,0.598492266472,0.605503460885
+datasetsCBR/credit-a,Selected KNN L1,7,Cosine,similar,2.65828380585,0.584206552186,0.59665317139
+datasetsCBR/credit-a,Basic KNN,7,Canberra,voting,5.55335931778,0.448143344294,0.50126115537
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,7,Canberra,voting,6.79649071693,0.448143344294,0.50126115537
+datasetsCBR/credit-a,Weighted KNN Relieff,7,Canberra,voting,11.3702911139,0.442492997199,0.5
+datasetsCBR/credit-a,Selected KNN variance,7,Canberra,voting,5.53329100609,0.448143344294,0.50126115537
+datasetsCBR/credit-a,Selected KNN L1,7,Canberra,voting,4.07011077404,0.446672756059,0.500997997475
+datasetsCBR/credit-a,Basic KNN,7,Canberra,similar,5.59449400902,0.442365119961,0.488431718253
+datasetsCBR/credit-a,Weighted KNN TreeClassifier,7,Canberra,similar,6.83748300076,0.442365119961,0.488431718253
+datasetsCBR/credit-a,Weighted KNN Relieff,7,Canberra,similar,11.3933800936,0.442492997199,0.5
+datasetsCBR/credit-a,Selected KNN variance,7,Canberra,similar,5.59339268208,0.440915844599,0.486434199643
+datasetsCBR/credit-a,Selected KNN L1,7,Canberra,similar,5.09668221474,0.445327609305,0.492135954029
